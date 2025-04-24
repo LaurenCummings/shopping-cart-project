@@ -1,7 +1,7 @@
-function ProductCard() {
+function ProductCard({product}) {
     return (
         <div>
-
+            Product Item
         </div>
     )
 }

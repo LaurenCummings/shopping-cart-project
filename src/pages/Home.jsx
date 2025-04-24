@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Circles } from 'react-loader-spinner';
+import ProductCard from '../components/ProductCard';
 
 function Home() {
     const [products, setProducts] = useState([]);
@@ -31,7 +32,15 @@ function Home() {
                         visible={true}
                     />
                 </div>
-                ) : null}
+                ) : 
+                <div className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3 space-x-5 space-y-10 lg:grid-cols-4 max-2-6xl mx-auto p-3">
+                    {products && products.length 
+                        ? products.map((productItem) => (
+                            <ProductCard product={productItem} />
+                        ))
+                        : null}
+                </div>
+                }
         </div>
     )
 }
