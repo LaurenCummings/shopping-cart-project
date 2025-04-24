@@ -11,6 +11,14 @@ function Header() {
                         </h1>
                     </div>
                 </Link>
+                <ul className="flex list-none item-center space-x-6 text-gray-800 font-semibold">
+                    <Link to={'/'}>
+                        <li className="cursor-pointer">Home</li>
+                    </Link>
+                    <Link to={'/Cart'}>
+                        <li className="cursor-pointer">Cart</li>
+                    </Link>
+                </ul>
             </nav>
         </div>
     )
