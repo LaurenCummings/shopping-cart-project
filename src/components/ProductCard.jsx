@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { addToCart } from '../store/slices/cart-slice';
 
 function ProductCard({product}) {
 
