@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../store/slices/cart-slice';
+import { addToCart, removeFromCart } from '../store/slices/cart-slice';
 
 function ProductCard({product}) {
 
@@ -11,7 +11,7 @@ function ProductCard({product}) {
     }
 
     function handleRemoveFromCart() {
-        console.log('removed');
+        dispatch(removeFromCart(product.id))
     }
 
     return (
