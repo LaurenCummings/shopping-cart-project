@@ -1,7 +1,12 @@
+import { useDispatch } from 'react-redux';
+import { removeFromCart } from '../store/slices/cart-slice';
+
 function CartCard({cartItem}) {
 
+    const dispatch = useDispatch()
+
     function handleRemoveFromCart() {
-        
+        dispatch(removeFromCart(cartItem.id));
     }
 
     return (
